@@ -44,29 +44,29 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 py-3">
           <div className="flex items-center justify-between">
             {/* Logo */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 md:visible invisible">
               <div className={`dark:text-white text-black font-extrabold text-3xl ${orbitron.className}`}>
                 Spendrillions
               </div>
             </div>
 
             {/* Money Display - Centered with background bar */}
-            <div className="flex-1 flex justify-center px-4">
-              <div className="relative w-full max-w-md">
+            <div className="flex-1 flex justify-center px-2 sm:px-4">
+              <div className="relative w-full max-w-[280px] sm:max-w-sm md:max-w-md">
                 {/* Background progress bar */}
-                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-12 sm:h-14">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-12 sm:h-14 lg:h-16">
                   <div
                     className={`h-full transition-all duration-700 ease-out rounded-full ${getProgressBarClass()}`}
                     style={{ 
                       width: `${remainingPercentage}%`,
-                      minWidth: remainingPercentage > 0 ? '8px' : '0px' // Only show minimum width if there's money
+                      minWidth: remainingPercentage > 0 ? '20px' : '0px'
                     }}
                   />
                 </div>
-                {/* Money text overlay - Always centered */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <span className="text-lg sm:text-xl lg:text-2xl font-bold text-white drop-shadow-lg text-center">
-                    {formatMoney(money)}
+                {/* Money text overlay - Absolutely positioned and perfectly centered */}
+                <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
+                  <span className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl font-bold text-white drop-shadow-2xl text-center leading-tight whitespace-nowrap">
+                    ${formatMoney(money)}
                   </span>
                 </div>
               </div>
