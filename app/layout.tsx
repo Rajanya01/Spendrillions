@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Chaos Shop - Spend Your Million",
+  title: "Spendrillions - Spend Your Million",
   description: "The most chaotic shopping simulator ever created",
 }
 
