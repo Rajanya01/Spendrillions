@@ -10,6 +10,11 @@ export const metadata: Metadata = {
   title: "Spendrillions - Spend Your Million",
   description: "The most chaotic shopping simulator ever created",
 }
+<script
+  src="https://synchronicity-avento-bot.vercel.app/sdk.js"
+  data-key="pk_f74323227dbb03ce11e90e3e0e7e7ff83f91bce2cb10aa76"
+  async
+></script>
 
 export default function RootLayout({
   children,
